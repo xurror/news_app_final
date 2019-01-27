@@ -1,0 +1,54 @@
+#header {
+    height: 100px;
+    background: #ee002d;
+    color: #ffffff
+}
+
+#branding h1{
+    color: #ffffff;
+}
+
+div.breadcrumbs {
+    background: #000000;
+    padding: 10px 40px;
+    border: none;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: left;
+}
+
+div.breadcrumbs a {
+    color: darkgrey
+}
+
+#changelist-filter h2 {
+    background: #ee002d;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 5px 15px;
+    margin-bottom: 12px;
+    border-bottom: none;
+}
+
+.module caption, .inline-group h2 {
+    background: #ee002d;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+a:link, a:visited {
+    color: #1b1a1a;
+    text-decoration: none;
+}
+
+a:-webkit-any-link {
+    color: #1b1a1a -webkit-link;
+    cursor: pointer;    
+}
+
+.object-tools a.addlink {    
+    color: #ffffff;
+    background: #ee002d
+}

@@ -6,6 +6,5 @@ db.sqlite3
 *.pyc
 localsettings.py
 \media
-\static
 venv
 .env
