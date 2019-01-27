@@ -1,0 +1,50 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+
+
+{% block branding %}
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+<!-- Favicon -->
+<link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
+<!-- Core Stylesheet -->
+<link rel="stylesheet" href="{% static 'css/style.css'%}">
+<!-- Font Icon -->
+<header class="header-area">
+        <h1 id="head">
+        <!-- Top Header Area -->
+        <div class="top-header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="top-header-content d-flex align-items-center justify-content-between">
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a href="{% url 'index' %}"><img src="{% static 'img/core-img/logo.png' %}" alt="">Admin Area</a>
+                            </div>                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </h1>
+
+    <div class="newspaper-main-menu" id="stickyMenu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="newspaperNav">
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a href="{% url 'index' %}"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+</header>          
+{% endblock %}
+
+
+{% block extrastyle %}
+    <link rel="stylesheet" href="{% static 'css/admin.css' %}">    
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    | LogIn
+{% endblock title %}
+
+{% block content %}
+    <!-- ##### Contact Form Area Start ##### -->
+            <!-- Sing in  Form -->
+            <section class="sign-in">
+                <div class="container">
+                    <div class="signin-content">
+                        
+    
+                        <div class="signin-form">
+                            <h2 class="form-title">Sign in</h2>
+                          
+                            <form action="{% url 'login' %}" class="register-form" id="login-form" method="POST" >
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <label for="username"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                    <input type="text" name="username" placeholder="Username" required/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password"><i class="zmdi zmdi-lock"></i></label>
+                                    <input type="password" name="password" placeholder="Password" required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                                    <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
+                                </div>
+                                <div class="form-group">                                
+                                    <a href="{% url 'register' %}" class="term-service">Create an account</a>
+                                </div>
+                                <div class="col-12 text-center">
+                                        <button class="btn newspaper-btn mt-30 w-100" type="submit">Login</button>
+                                </div>
+                            </form>                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+    <!-- ##### Contact Form Area End ##### -->
+{% endblock content %}
+    

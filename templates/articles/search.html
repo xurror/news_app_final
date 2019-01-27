@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    | Search Result
+{% endblock title %}
+    
+{% load static %}
+{% block content %}
+    <!-- ##### Blog Area Start ##### -->
+    <div class="blog-area section-padding-0-80">
+        <div class="container">
+            
+                    <div class="blog-posts-area">
+                        
+                        {% if keys %}
+                            {% for key in keys %}
+                            <!-- Single Featured Post -->
+                        <div class="single-blog-post featured-post single-post">
+                            
+                                                          
+                                <div class="post-thumb">
+                                    <a href="{{key.photo_main.url}}">
+                                        <img src="{{key.photo_main.url}}" alt="">
+                                    </a>
+                                </div>
+                               
+    
+                                <div class="post-data">
+                                    <a href="#" class="post-catagory">{{key.category}}</a>
+                                    <a href="#" class="post-title">
+                                        <h6>{{key.title}}</h6>
+                                    </a>
+                                    
+                                    {% if key.content %}
+                                    <div class="post-meta">
+                                        <p class="post-author">By <a href="#">{{key.author}}</a></p>
+                                        <p>{{key.content}}</p>                                   
+                                    </div>                                    
+                                    {% else %}   
+                                    <div class="post-meta">
+                                        <p class="post-author">By <a href="#">{{key.author}}</a></p>
+                                        <p>{{key.description}}</p>                                   
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div> 
+                            {% endfor %}
+                        {% endif %}
+                            
+                                               
+                    </div>             
+        </div>
+    </div>
+    <!-- ##### Blog Area End ##### -->
+{% endblock content %}
+    

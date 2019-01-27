@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    | article
+{% endblock title %}
+    
+{% load static %}
+{% block content %}
+    <!-- ##### Blog Area Start ##### -->
+    <div class="blog-area section-padding-0-80">
+        <div class="container">
+            
+                    <div class="blog-posts-area">
+                        
+                        <!-- Single Featured Post -->
+                        <div class="single-blog-post featured-post single-post">
+                            
+                                                          
+                            <div class="post-thumb">
+                                <a href="{{article.photo_main.url}}">
+                                    <img src="{{article.photo_main.url}}" alt="">
+                                </a>
+                            </div>
+                           
+
+                            <div class="post-data">
+                                <a href="#" class="post-catagory">Finance</a>
+                                <a href="#" class="post-title">
+                                    <h6>{{article.title}}</h6>
+                                </a>
+                                
+                                {% if article.content %}
+                                <div class="post-meta">
+                                    <p class="post-author">By <a href="#">{{article.author}}</a></p>
+                                    <p>{{article.content}}</p>                                   
+                                </div>                                    
+                                {% else %}   
+                                <div class="post-meta">
+                                    <p class="post-author">By <a href="#">{{article.author}}</a></p>
+                                    <p>{{article.description}}</p>                                   
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <!-- About Author -->
+                        <div class="blog-post-author d-flex">
+                            <div class="author-thumbnail">
+                                <img src="{{article.author.photo.url}}" alt="">
+                            </div>
+                            <div class="author-info">
+                                <a href="#" class="author-name">{{article.author}}, <span>The Author</span></a>
+                                <p>{{article.author.description}}</p>
+                            </div>
+                        </div>
+
+                        <div class="pager d-flex align-items-center justify-content-between">
+                            <div class="prev">
+                                <a href="#" class="active"><i class="fa fa-angle-left"></i> previous</a>
+                            </div>
+                            <div class="next">
+                                <a href="#">Next <i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="section-heading">
+                            <h6>Related</h6>
+                        </div>
+
+                        <div class="row">
+                            <!-- Single Post -->
+                            <div class="col-12 col-md-6">
+                                <div class="single-blog-post style-3 mb-80">
+                                    <div class="post-thumb">
+                                        <a href="#"><img src="{% static 'img/bg-img/12.jpg' %}" alt=""></a>
+                                    </div>
+                                    <div class="post-data">
+                                        <a href="#" class="post-catagory">Finance</a>
+                                        <a href="#" class="post-title">
+                                            <h6>Dolor sit amet, consectetur adipiscing elit. Nam eu metus sit amet odio sodales placer. Sed varius leo ac...</h6>
+                                        </a>                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Single Post -->
+                            <div class="col-12 col-md-6">
+                                <div class="single-blog-post style-3 mb-80">
+                                    <div class="post-thumb">
+                                        <a href="#"><img src="{% static 'img/bg-img/13.jpg' %}" alt=""></a>
+                                    </div>
+                                    <div class="post-data">
+                                        <a href="#" class="post-catagory">Finance</a>
+                                        <a href="#" class="post-title">
+                                            <h6>Dolor sit amet, consectetur adipiscing elit. Nam eu metus sit amet odio sodales placer. Sed varius leo ac...</h6>
+                                        </a>                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+             
+        </div>
+    </div>
+    <!-- ##### Blog Area End ##### -->
+{% endblock content %}
+    
